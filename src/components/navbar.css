@@ -1,0 +1,51 @@
+.App-logo {
+  height: 50px;
+  pointer-events: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.brandName {
+  margin-right: auto;
+}
+
+.App-nav {
+  background-color: #37393d;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: white;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.carritoImg {
+  height: 20px;
+  margin-right: 20px;
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}

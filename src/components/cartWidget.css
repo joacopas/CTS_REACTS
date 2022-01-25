@@ -1,0 +1,16 @@
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+}
+
+.carritoImg {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.itemsNumber {
+  margin-right: 15px;
+}
