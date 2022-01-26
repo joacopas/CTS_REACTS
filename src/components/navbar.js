@@ -8,7 +8,7 @@ const navbar = () => {
     <nav className="App-nav">
       <img className="App-logo" src={ctsLogo} alt="Logo Crea Tu Spot" />
       <h1 className="brandName">#CREATUSPOT</h1>
-      <ul className="navList">
+      <ul className="menuList ">
         <li className="listItem">
           <a href="#">Inicio</a>
         </li>
@@ -21,6 +21,10 @@ const navbar = () => {
         <li className="listItem">
           <a href="#">Contacto</a>
         </li>
+      </ul>
+      <ul className="navList">
+        <li className="listItem loginBtn">Log in</li>
+        <li className="listItem RegisterBtn">Registrarme</li>
       </ul>
       <CartWidget />
     </nav>
