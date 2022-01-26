@@ -1,22 +1,32 @@
 .App-logo {
   height: 50px;
-  pointer-events: none;
-  margin-left: 20px;
-  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
 }
 .brandName {
+  color: white;
   margin-right: auto;
 }
 
-.App-nav {
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
   background-color: #000000;
-  height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
   color: white;
+  margin: 0 auto;
+}
+.navSignup {
+  text-decoration: none;
 }
 
 .menuList {
@@ -24,23 +34,15 @@
   flex-direction: row;
   justify-content: space-between;
   justify-self: center;
-  margin-right: auto;
-}
-
-.navList {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-right: 10px;
+  align-items: center;
 }
 
 .listItem {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px;
+  margin: 0 10px;
   text-decoration: none;
-  font-size: 18px;
 }
 
 a {
@@ -48,12 +50,11 @@ a {
   color: white;
 }
 
-.carritoImg {
-  height: 20px;
-  margin-right: 20px;
-  color: black;
-}
-
 .App-link {
   color: #61dafb;
+}
+
+.navSignup {
+  align-items: center;
+  display: flex;
 }
