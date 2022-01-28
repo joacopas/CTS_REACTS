@@ -1,10 +1,12 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 import "./ItemListContainer.css";
 
 function ItemListContainer({ greeting }) {
   return (
     <>
-      <h2 className="listContainer">Somos {greeting}</h2>
+      <h1 className="listContainer"> {greeting}</h1>
+      <ItemCount />
     </>
   );
 }
