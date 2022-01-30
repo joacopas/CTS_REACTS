@@ -3,19 +3,24 @@ import "./ItemCount.css";
 
 function ItemCount() {
   const [counter, setCounter] = useState(0);
-  const [msj, setMsj] = useState("Agregado al carrito");
+  // const [msj, setMsj] = useState("Agregado al carrito");
 
   function addItem() {
-    setCounter(counter + 1);
-  }
-  function restItem() {
-    if (counter >= 1) {
-      setCounter(counter - 1);
+    if (stock > 0) {
+      if (counter >= 0 && counter < stock) {
+        setCounter(counter + 1);
+      }
     }
   }
 
-  function addToCart() {
-    setCounter((counter = 0));
+  const stock = 0;
+
+  function restItem() {
+    if (stock > 0) {
+      if (counter >= 1) {
+        setCounter(counter - 1);
+      }
+    }
   }
 
   return (
@@ -30,9 +35,7 @@ function ItemCount() {
           +
         </button>
       </fieldset>
-      <button onClick={addToCart} className="btnAddToCart">
-        Agregar al carrito
-      </button>
+      <button className="btnAddToCart">Agregar al carrito</button>
     </div>
   );
 }

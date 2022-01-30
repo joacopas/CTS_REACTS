@@ -5,10 +5,10 @@ import "./App.css";
 
 function App() {
   return (
-    <body className="App">
+    <div className="App">
       <NavBar />
       <ItemListContainer greeting="CREA TU SPOT" />
-    </body>
+    </div>
   );
 }
 
