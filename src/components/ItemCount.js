@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
 
-function ItemCount() {
+function ItemCount({ stock }) {
   const [counter, setCounter] = useState(0);
-  // const [msj, setMsj] = useState("Agregado al carrito");
-  const stock = 15;
 
   function addItem() {
     if (stock > 0) {
@@ -46,37 +44,3 @@ function ItemCount() {
 }
 
 export default ItemCount;
-
-// //CLASE DE PRMISE Y MAP
-// const productos = [
-//   {
-//     id: 2,
-//     title: "Fogonero 120",
-//     descripcion: "fogonero 120cm diametro",
-//     precio: 25000,
-//   },
-//   {
-//     id: 1,
-//     title: "Fogonero 100",
-//     descripcion: "fogonero 120cm diametro",
-//     precio: 25000,
-//   },
-//   {
-//     id: 3,
-//     title: "Fogonero 75",
-//     descripcion: "fogonero 120cm diametro",
-//     precio: 25000,
-//   },
-// ];
-// const promesa = new Promise(function (resolve, reject) {
-//   setTimeout(function () {
-//     resolve(productos);
-//     // retorne de productos
-//   }, 2000);
-// });
-
-// function getItems() {
-//   console.log(promesa);
-// }
-
-// export { getItems };

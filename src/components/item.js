@@ -8,7 +8,7 @@ function Item({ item }) {
       <h3 className="itemTitle">{item.title}</h3>
       <img src={item.itemImg} alt="imagne de l producto" className="itemImg" />
       <p className="itemPrice">Precio: {item.precio}</p>
-      <ItemCount />
+      <ItemCount stock={15} />
     </div>
   );
 }
