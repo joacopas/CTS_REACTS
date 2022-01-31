@@ -1,0 +1,13 @@
+.itemCard {
+  border: 1px solid rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.itemTitle {
+  justify-content: center;
+  display: flex;
+}
