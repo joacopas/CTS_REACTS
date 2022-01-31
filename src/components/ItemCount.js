@@ -25,7 +25,7 @@ function ItemCount({ stock }) {
   }
 
   return (
-    <div className="counter">
+    <div className="counterCard">
       <h4 className="itemTitle ">Item </h4>
       <fieldset className="counterBox d-flex">
         <button onClick={restItem} className="btnRest">

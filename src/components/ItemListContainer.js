@@ -18,7 +18,7 @@ function ItemListContainer({ greeting }) {
       {productos.length > 0 ? (
         <ItemList productos={productos} />
       ) : (
-        <p>Cargando...</p>
+        <p className="loading">Cargando...</p>
       )}
     </>
   );
