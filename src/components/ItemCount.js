@@ -36,9 +36,14 @@ function ItemCount({ stock }) {
           +
         </button>
       </fieldset>
-      <button onClick={onAdd} className="btnAddToCart">
-        Agregar al carrito
-      </button>
+      <div className="ItemBtn">
+        <button onClick={onAdd} className="btnAddToCart">
+          Agregar al carrito
+        </button>
+        <a href="#">
+          <button className="btnVerItem">Ver detalles</button>
+        </a>
+      </div>
     </div>
   );
 }

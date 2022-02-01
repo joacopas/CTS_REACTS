@@ -30,7 +30,21 @@
 }
 .btnAddToCart {
   display: flex;
-  margin: 10px auto;
+  margin: 10px 10px;
+  border: none;
+  background-color: #0088a9;
+  padding: 5px 15px;
+  color: white;
+}
+
+.ItemBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btnVerItem {
+  display: flex;
+  margin: 10px 0px;
   border: none;
   background-color: #0088a9;
   padding: 5px 15px;
