@@ -1,0 +1,22 @@
+.detailContainer {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: dimgray;
+  color: white;
+  box-shadow: 10px 14px 15px 3px #888686;
+  border-radius: 10px;
+}
+
+.detailContainer img {
+  display: flex;
+  width: 30%;
+  height: 500px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.Detail {
+  margin: auto;
+}
