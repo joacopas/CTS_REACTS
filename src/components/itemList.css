@@ -1,4 +1,9 @@
 .itemsList {
   display: flex;
-  margin: 70px auto;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1300px;
 }

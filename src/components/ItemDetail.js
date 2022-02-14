@@ -5,13 +5,22 @@ import "./ItemDetail.css";
 function ItemDetail({ item }) {
   return (
     <div className="detailContainer container">
-      <img src={item.itemImg} alt="Imagen de producto" className="detailImg" />
-      <div>
-        <h3 className="detailTitle">{item.title}</h3>
-        <p className="Detalle">Detalle de producto blablalbabla</p>
-        <p className="detailPrice"> ${item.precio}</p>
-        <div className="Detail">
-          <ItemCount stock={15} />
+      <div className="detailContainerInfo">
+        <img
+          src={item.itemImg}
+          alt="Imagen de producto"
+          className="detailImg"
+        />
+        <div className="detailBox">
+          <div className="detailInfo">
+            <h3 className="detailTitle">{item.title}</h3>
+            <p className="detailPrice"> ${item.precio}</p>
+            <p className="Detalle">{item.descripcion}</p>
+          </div>
+
+          <div className="DetailCounter">
+            <ItemCount stock={15} />
+          </div>
         </div>
       </div>
     </div>

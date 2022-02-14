@@ -1,0 +1,12 @@
+.contactForm {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.btnSubmit {
+  display: flex;
+  padding: 5px 15px;
+  background-color: #0088a9;
+  border: none;
+  color: white;
+}

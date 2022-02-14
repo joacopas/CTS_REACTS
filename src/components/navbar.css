@@ -1,11 +1,17 @@
 .App-logo {
   height: 50px;
+  display: flex;
 }
 
 .nav-link {
   text-decoration: none;
   color: white;
 }
+
+ul lirf {
+  text-decoration: none;
+}
+
 .brandName {
   color: white;
   margin-right: auto;
@@ -14,6 +20,12 @@
 .container {
   display: flex;
   align-items: center;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .nav {
@@ -57,4 +69,16 @@ a {
 .navSignup {
   align-items: center;
   display: flex;
+}
+
+.dropdown-menu {
+  transform: translate3d(0px, 48px, 0px) !important;
+  background-color: black;
+}
+
+.dropdownListItem {
+  margin: 0.8rem;
+  text-decoration: none;
+  font-size: 1rem;
+  min-width: 11rem;
 }

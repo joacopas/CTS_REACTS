@@ -1,0 +1,16 @@
+.nosotrosText {
+  margin: 1rem auto;
+  line-height: 2.5rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  color: black;
+}

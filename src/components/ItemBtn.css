@@ -1,0 +1,8 @@
+.btnAdd {
+  display: flex;
+  padding: 5px 15px;
+  background-color: #0088a9;
+  border: none;
+  color: white;
+  margin: 0 auto;
+}

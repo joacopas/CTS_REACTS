@@ -4,11 +4,11 @@ import "./itemList.css";
 
 function itemList({ productos }) {
   return (
-    <div className="itemsList container">
+    <section className="itemsList container mt-5">
       {productos.map(function (item) {
         return <Item key={item.id} item={item} />;
       })}
-    </div>
+    </section>
   );
 }
 
