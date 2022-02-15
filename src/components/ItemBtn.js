@@ -8,7 +8,7 @@ function ItemBtn({ item }) {
   return (
     <div className="counterCard">
       <div className="">
-        <button className="btnAdd" onClick={onAdd}>
+        <button className="btnAddToCartItem" onClick={onAdd}>
           Agregar al carrito
         </button>
       </div>

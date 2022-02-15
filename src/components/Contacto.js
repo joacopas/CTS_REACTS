@@ -7,30 +7,24 @@ function Contacto() {
       <h2>Contacto</h2>
       <div className="">
         <div className="mb-3 mt-3">
-          <label
-            for="exampleFormControlInput1"
-            className="form-label float-start"
-          >
+          <label for="nameInput" className="form-label float-start">
             Nombre
           </label>
           <input
             type="name"
             className="form-control"
-            id="exampleFormControlInput1"
+            id="nameInput"
             placeholder="Nombre Apellido"
           />
         </div>
         <div className="mb-3 mt-3">
-          <label
-            for="exampleFormControlInput1"
-            className="form-label float-start"
-          >
+          <label for="mailInput" className="form-label float-start">
             Email
           </label>
           <input
             type="email"
             className="form-control"
-            id="exampleFormControlInput1"
+            id="mailInput"
             placeholder="name@example.com"
           />
         </div>
@@ -43,7 +37,7 @@ function Contacto() {
           </label>
           <textarea
             className="form-control"
-            id="exampleFormControlTextarea1"
+            id="TextArea"
             rows="3"
             spellcheck="false"
           ></textarea>

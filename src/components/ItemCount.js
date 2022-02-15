@@ -2,36 +2,33 @@ import React, { useState } from "react";
 import "./ItemCount.css";
 import { Link } from "react-router-dom";
 
-function ItemCount({ stock }) {
-  const [counter, setCounter] = useState(0);
+function ItemCount({ stock, initial, onAdd }) {
+  const [counter, setCounter] = useState(initial);
 
-  // function addItem() {
-  //   if (stock > 0) {
-  //     if (counter >= 0 && counter < stock) {
-  //       setCounter(counter + 1);
-  //     }
-  //   }
-  // }
-
-  // function restItem() {
-  //   if (stock > 0) {
-  //     if (counter >= 1) {
-  //       setCounter(counter - 1);
-  //     }
-  //   }
-  // }
-
-  function onAdd() {
-    alert(`Usted agrego ${counter} items al carrito`);
+  function addItem() {
+    if (stock > 0) {
+      if (counter >= 0 && counter < stock) {
+        setCounter(counter + 1);
+      }
+    }
   }
 
-  function AddToCart(event) {
-    console.log(event.target.value);
+  function restItem() {
+    if (stock > 0) {
+      if (counter >= 1) {
+        setCounter(counter - 1);
+      }
+    }
+  }
+
+  function addToCart() {
+    console.log();
+    onAdd(counter);
   }
 
   return (
     <div className="counterCard">
-      <select onChange={AddToCart} className="detailSelect">
+      {/* <select onChange={onChangeCounter} className="detailSelect">
         {Array.from(Array(stock).keys()).map(function (num) {
           return (
             <option key={num + 1} value={num + 1}>
@@ -39,9 +36,18 @@ function ItemCount({ stock }) {
             </option>
           );
         })}
-      </select>
+      </select> */}
+      <fieldset className="counterBox ">
+        <button onClick={restItem} className="btnRest">
+          -
+        </button>
+        <p className="counter">{counter}</p>
+        <button onClick={addItem} className="btnAdd">
+          +
+        </button>
+      </fieldset>
       <div className="ItemBtn">
-        <button onClick={onAdd} className="btnAddToCart">
+        <button onClick={addToCart} className="btnAddToCart">
           Agregar al carrito
         </button>
 
