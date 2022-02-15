@@ -31,7 +31,9 @@ function ItemDetail({ item }) {
             {!counter ? (
               <ItemCount stock={10} onAdd={onAddItem} initial={1} />
             ) : (
-              <Link to="/cart">Ir al carrito</Link>
+              <Link to="/cart">
+                <button className="goToCart">Ir al carrito</button>
+              </Link>
             )}
           </div>
         </div>

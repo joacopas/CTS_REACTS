@@ -52,3 +52,12 @@
   margin-bottom: auto;
   width: 100%;
 }
+
+.goToCart {
+  display: flex;
+  margin-left: auto;
+  border: none;
+  background-color: #0088a9;
+  padding: 5px 15px;
+  color: white;
+}
