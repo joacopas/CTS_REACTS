@@ -20,7 +20,7 @@ const navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <div class="btn-group btn-sm">
+            <div className="btn-group btn-sm">
               <NavLink to={`/productos`} className="">
                 <div class="dropdown ">
                   <button
@@ -72,12 +72,14 @@ const navbar = () => {
         </ul>
 
         <div className="d-flex">
-          <a href="#" className="nav-link ">
-            Log In
-          </a>
-          <a href="#" className="nav-link ">
-            Registrarme
-          </a>
+          <ul className="nav">
+            <li className="nav-link">
+              <NavLink to={`/login`}>Log in</NavLink>
+            </li>
+            <li className="nav-link">
+              <NavLink to={`/registro`}>Registrarse</NavLink>
+            </li>
+          </ul>
         </div>
         <CartWidget />
       </div>
