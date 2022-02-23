@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
@@ -13,15 +14,20 @@ const Cart = () => {
   return (
     <>
       {cart.length === 0 ? (
-        <h2>Aun no hay poroducto s volve al home</h2>
+        <>
+          <h2>Aun no hay poroducto s volve al home</h2>
+          <Link to={"/"} className="btn">
+            home
+          </Link>
+        </>
       ) : (
         <>
-          {cart.map((item) => {
-            <div>
-              <p>{item.title}</p>
-              <button onClick={deleteOneFromCart}>X</button>
-            </div>;
-          })}
+          {cart.map((item) => (
+            <div key={item.id}>
+              <h3>{item.title}</h3>
+              <button onClick={() => deleteOneFromCart(item.id)}>X</button>
+            </div>
+          ))}
           <button onClick={vaciarCarrtio}>Vaciar el carrito</button>
           {/* mostrar totoal de productios */}
 

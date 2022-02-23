@@ -16,7 +16,9 @@ function Item({ item }) {
       </Link>
 
       <p className="itemPrice"> ${item.precio}</p>
-      <ItemBtn />
+      <Link to={`/item/${item.id}`}>
+        <ItemBtn />
+      </Link>
     </div>
   );
 }

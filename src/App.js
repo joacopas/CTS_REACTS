@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./components/Contacto";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./components/Cart";
+import ItemBtn from "./components/ItemBtn";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               element={<ItemListContainer greeting="#CREATUSPOT" />}
             />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/item/:itemId" element={<ItemBtn />} />
             <Route
               path="/category/:category"
               element={<ItemListContainer greeting="Productos" />}

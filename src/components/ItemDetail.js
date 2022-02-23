@@ -6,7 +6,7 @@ import "./ItemDetail.css";
 
 function ItemDetail({ item }) {
   const [counter, setCounter] = useState(false);
-  const { inToCart, cart } = useContext(CartContext);
+  const { inToCart } = useContext(CartContext);
 
   function onAddItem(newItemCounter) {
     setCounter(true);

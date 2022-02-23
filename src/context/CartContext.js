@@ -11,6 +11,7 @@ const CartContextProvider = ({ children }) => {
       alert("ya etsa en el carrito");
     } else {
       setCart([...cart, { ...item, newItemCounter }]);
+      console.log(newItemCounter, item);
     }
   };
 
@@ -28,7 +29,7 @@ const CartContextProvider = ({ children }) => {
 
   const deleteOneFromCart = (id) => {
     //La llama CartScreen.
-    setCart(cart.filter((item) => item.id != id));
+    setCart(cart.filter((item) => item.id !== id));
   };
 
   // sumar por cantidad
