@@ -23,7 +23,7 @@ const productos = [
     CONSULTAR PRECIOS POR LOS ACCESORIOS OPCIONALES.
     
     HACEMOS ENVÍOS A TODO EL PAÍS, CONSULTAR PRECIOS SEGÚN LOCALIDAD Y PROVINCIA.`,
-    precio: 40000,
+    precio: "40000",
     itemImg: imgFog120,
     category: "fogoneros",
   },
@@ -44,7 +44,7 @@ const productos = [
     CONSULTAR PRECIOS POR LOS ACCESORIOS OPCIONALES.
     
     HACEMOS ENVÍOS A TODO EL PAÍS, CONSULTAR PRECIOS SEGÚN LOCALIDAD Y PROVINCIA.`,
-    precio: 30000,
+    precio: "30000",
     itemImg: imgFog100,
     category: "fogoneros",
   },
@@ -65,7 +65,7 @@ const productos = [
     CONSULTAR PRECIOS POR LOS ACCESORIOS OPCIONALES.
     
     HACEMOS ENVÍOS A TODO EL PAÍS, CONSULTAR PRECIOS SEGÚN LOCALIDAD Y PROVINCIA.`,
-    precio: 20000,
+    precio: "20000",
     itemImg: imgFog75,
     category: "fogoneros",
   },
@@ -79,7 +79,7 @@ const productos = [
     ** Medidas: Ancho 50 cm, largo 30cm, profundidad 3cm.
     
     ** Las imágenes son ilustrativas, nuestros productos son 100% artesanales y pueden presentar variaciones estéticas, en colores, formas, betas y tonos.`,
-    precio: "4.500",
+    precio: `4500`,
     itemImg: imgTabla,
     category: "tablas",
   },
@@ -88,7 +88,7 @@ const productos = [
     title: "Cubiertos x6",
     descripcion:
       "CAJA X6 UNIDADES TENEDOR Y CUCHILLO 12CM (gw) Caja de madera natural con juego de 6 unidades de cuchillo y tenedor de mesa. Tenedor y Cuchillo artesanales con hoja de 12cm y un inmejorable filo que se preserva en el tiempo. Hojas confeccionadas en acero inoxidable AISI420, mangos (A) combinados en madera de guayubira y hueso de canilla de vaca ",
-    precio: "26.000",
+    precio: "26000",
     itemImg: imgCuchi,
     category: "cubiertos",
   },
@@ -104,7 +104,7 @@ const productos = [
     ** Consultar por grabados y personalizaciones (con costo adicional no incluido en el precio de la publicación).
     
     ** Las imágenes son ilustrativas, los productos pueden presentar variaciones estéticas, en colores y tonos.`,
-    precio: "3.250",
+    precio: "3250",
     itemImg: imgGuantes,
     category: "accesorios",
   },

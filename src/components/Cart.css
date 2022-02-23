@@ -1,1 +1,88 @@
+.btnHome {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-self: center;
+  color: black;
+  border: 1px solid black;
+  border-radius: 15px;
+}
 
+.cartContainer {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.cartItem {
+  border-right: 1px solid black;
+  width: 70%;
+  margin-right: auto;
+  margin: 0rem 1rem 0rem 1rem;
+  color: black;
+}
+
+.cartItemContainer {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 00.5rem;
+}
+
+.deleteItemBtn {
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: end;
+  margin-left: auto;
+  margin-right: 1rem;
+  color: white;
+}
+
+.cartItemImg {
+  width: 5rem;
+  border-radius: 15px;
+}
+.resumenContainer {
+  display: block;
+  width: 30%;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: black;
+}
+.cartItemTitle {
+  padding: 1rem 0;
+  align-items: center;
+  margin: auto 1rem;
+}
+
+.cartItemCuantity {
+  margin: auto 0.5rem;
+}
+
+.cartItemPrice {
+  margin: auto 0.5rem;
+}
+
+.deleteAllBtnContainer {
+  display: flex;
+  margin-top: 4;
+}
+
+.deleteAllBtn {
+  margin-right: 0.5rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.buyAllBtn {
+  /* align-self: center; */
+  margin-left: 0.5rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 15px;
+  background-color: dimgray;
+  color: white;
+}

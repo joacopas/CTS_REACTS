@@ -8,7 +8,8 @@ const CartContextProvider = ({ children }) => {
 
   const inToCart = (newItemCounter, item) => {
     if (isOnCart(item.id)) {
-      alert("ya etsa en el carrito");
+      //sumar cantidad
+      getItemQuantity(newItemCounter, item);
     } else {
       setCart([...cart, { ...item, newItemCounter }]);
       console.log(newItemCounter, item);
@@ -34,10 +35,19 @@ const CartContextProvider = ({ children }) => {
 
   // sumar por cantidad
 
+  const getItemQuantity = (newItemCounter, item) => {
+    const copia = [...cart];
+    copia.forEach((producto) => {
+      if (producto.id === item.id) {
+        producto.newItemCounter += newItemCounter;
+      }
+    });
+  };
+
   const getCartQuantity = () => {
     let cartQuantity = 0;
     for (let i = 0; i < cart.length; i++) {
-      cartQuantity += cart[i].quantity;
+      cartQuantity += cart[i].newItemCounter;
     }
     return cartQuantity;
   };
@@ -45,11 +55,16 @@ const CartContextProvider = ({ children }) => {
   const getCartTotalPrice = () => {
     let totalPrice = 0;
     for (let i = 0; i < cart.length; i++) {
-      totalPrice += cart[i].price * cart[i].quantity;
+      totalPrice += cart[i].precio * cart[i].newItemCounter;
     }
     return totalPrice;
   };
   // sumar cantidad e items total de carrito
+
+  //finalizar compra
+  const buyAll = () => {
+    alert("Congrats por finalizar la compra");
+  };
 
   console.log(cart);
   return (
@@ -59,8 +74,10 @@ const CartContextProvider = ({ children }) => {
         inToCart,
         vaciarCarrtio,
         deleteOneFromCart,
-        getCartQuantity,
+        getItemQuantity,
         getCartTotalPrice,
+        getCartQuantity,
+        buyAll,
       }}
     >
       {children}
