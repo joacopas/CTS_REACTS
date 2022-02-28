@@ -3,17 +3,30 @@ import { useParams } from "react-router-dom";
 import { getItems } from "../api/api";
 import ItemDetail from "./ItemDetail";
 import "./ItemDetailContainer.css";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase";
 
 function ItemDetailContainer() {
   const [item, setItem] = useState();
   const { itemId } = useParams();
 
   useEffect(() => {
-    getItems().then((items) => {
-      const item = items.find((i) => i.id === Number(itemId));
+    // getItems().then((items) => {
+    //   const item = items.find((i) => i.id === Number(itemId));
 
-      setItem(item);
-    });
+    //   setItem(item);
+    // });
+
+    const itemRef = doc(db, "item", itemId);
+    getDoc(itemRef)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          setItem({ id: snapshot.id, ...snapshot.data() });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [itemId]);
 
   return (

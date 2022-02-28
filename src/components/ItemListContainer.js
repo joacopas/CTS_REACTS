@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { getItems } from "../api/api";
 import ItemList from "./itemList";
 import "./ItemListContainer.css";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../firebase";
 
 function ItemListContainer({ greeting }) {
   const [productos, setProductos] = useState([]);
@@ -21,6 +23,7 @@ function ItemListContainer({ greeting }) {
       }
     });
   }, [category]);
+
   return (
     <>
       <h1 className="listContainer mt-6"> {greeting}</h1>
