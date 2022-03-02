@@ -24,6 +24,21 @@ function ItemListContainer({ greeting }) {
     });
   }, [category]);
 
+  useEffect(() => {
+    const itemsCollection = collection(db, "items");
+    getDocs(itemsCollection)
+      .then((snapshot) => {
+        const products = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log(products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+
   return (
     <>
       <h1 className="listContainer mt-6"> {greeting}</h1>

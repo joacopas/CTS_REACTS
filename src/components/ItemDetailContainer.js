@@ -17,7 +17,7 @@ function ItemDetailContainer() {
     //   setItem(item);
     // });
 
-    const itemRef = doc(db, "item", itemId);
+    const itemRef = doc(db, "items", itemId);
     getDoc(itemRef)
       .then((snapshot) => {
         if (snapshot.exists()) {
@@ -31,7 +31,7 @@ function ItemDetailContainer() {
 
   return (
     <div className="ItemDetailContainer">
-      {!item ? <p>Cargando producto..</p> : <ItemDetail item={item} />}
+      {!item ? <p>Cargando producto</p> : <ItemDetail item={item} />}
     </div>
   );
 }

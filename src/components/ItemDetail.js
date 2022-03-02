@@ -25,7 +25,7 @@ function ItemDetail({ item }) {
           <div className="detailInfo">
             <h3 className="detailTitle">{item.title}</h3>
             <p className="detailPrice"> ${item.precio}</p>
-            <p className="Detalle">{item.descripcion}</p>
+            <p className="Detalle">{item.description}</p>
           </div>
 
           <div className="DetailCounter">
