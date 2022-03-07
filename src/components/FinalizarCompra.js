@@ -7,7 +7,7 @@ function FinalizarCompra() {
   //finalizar compra
   const { cart, getCartTotalPrice } = useContext(CartContext);
 
-  const [orderId, setOrderId] = useState([]);
+  const [id, setOrderId] = useState([]);
   const [buyerName, setBuyerName] = useState([]);
   const [surname, setSurname] = useState([]);
   const [phone, setPhone] = useState([]);
@@ -18,31 +18,40 @@ function FinalizarCompra() {
   const handlePhoneChange = (event) => setPhone(event.target.value);
   const handleEmailChange = (event) => setEmail(event.target.value);
 
-  const buyAll = () => {
-    //creo la orden
-    const newOrder = {
-      date: new Date(),
-      buyer: [buyerName, surname, phone, email],
-      items: cart,
-      total: getCartTotalPrice(),
-    };
-    console.log(newOrder);
+  const submitForm = (event) => {
+    event.preventDefault();
 
-    //creo el ticket en firebase collection
-    addDoc(collection(db, "ticket"), newOrder)
-      .then((res) => {
-        setOrderId(res.id);
-        console.log(newOrder);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    //VAlidar datos
+    if (![buyerName, surname, phone, email].some((field) => field === "")) {
+      console.log("todo bien");
+
+      //creo la orden
+      const newOrder = {
+        date: new Date(),
+        buyer: [buyerName, surname, phone, email],
+        items: cart,
+        total: getCartTotalPrice(),
+      };
+      console.log(newOrder);
+
+      //creo el ticket en firebase collection
+      addDoc(collection(db, "ticket"), newOrder)
+        .then((res) => {
+          setOrderId(res.id);
+          console.log(newOrder);
+          alert(newOrder);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+    }
   };
 
   return (
     <div className="formProduct">
       <h1>Finalizar compra</h1>
-      <form>
+      <form onSubmit={submitForm}>
         <div className="inputItem">
           <label>Nombre</label>
           <input
@@ -79,11 +88,7 @@ function FinalizarCompra() {
           ></input>
         </div>
 
-        <button
-          onClick={buyAll}
-          className="add-to-cart-button btn"
-          type="submit"
-        >
+        <button className="add-to-cart-button btn" type="submit">
           Finalizar compra
         </button>
       </form>
