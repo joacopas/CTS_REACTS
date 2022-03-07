@@ -9,6 +9,8 @@ import Contacto from "./components/Contacto";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./components/Cart";
 import ItemBtn from "./components/ItemBtn";
+import AddItemContainer from "./components/AddItemContainer";
+import FinalizarCompra from "./components/FinalizarCompra";
 
 function App() {
   return (
@@ -34,6 +36,11 @@ function App() {
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/Cart" element={<Cart />} />
+            <Route exact path="/item/add" element={<AddItemContainer />} />
+            <Route
+              path="/finalizarCompra"
+              element={<FinalizarCompra />}
+            ></Route>
           </Routes>
         </div>
       </BrowserRouter>

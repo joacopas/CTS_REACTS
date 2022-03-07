@@ -11,7 +11,6 @@ const Cart = () => {
     getItemQuantity,
     getCartQuantity,
     getCartTotalPrice,
-    buyAll,
   } = useContext(CartContext);
 
   return (
@@ -53,9 +52,9 @@ const Cart = () => {
               >
                 Vaciar el carrito
               </button>
-              <button onClick={buyAll} className="d-flex btn buyAllBtn">
-                Comprar
-              </button>
+              <Link to={`/finalizarCompra`}>
+                <button className="d-flex btn buyAllBtn">Comprar</button>
+              </Link>
             </div>
           </div>
 

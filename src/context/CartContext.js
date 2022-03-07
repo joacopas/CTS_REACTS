@@ -61,11 +61,6 @@ const CartContextProvider = ({ children }) => {
   };
   // sumar cantidad e items total de carrito
 
-  //finalizar compra
-  const buyAll = () => {
-    alert("Congrats por finalizar la compra");
-  };
-
   console.log(cart);
   return (
     <CartContext.Provider
@@ -77,7 +72,6 @@ const CartContextProvider = ({ children }) => {
         getItemQuantity,
         getCartTotalPrice,
         getCartQuantity,
-        buyAll,
       }}
     >
       {children}

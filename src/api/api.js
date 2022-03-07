@@ -116,7 +116,6 @@ const promesa = new Promise(function (resolve, reject) {
         ...doc.data(),
       }));
       resolve(products);
-      console.log(products);
     })
     .catch((error) => {
       console.log(error);
