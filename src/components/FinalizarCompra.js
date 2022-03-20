@@ -39,7 +39,7 @@ function FinalizarCompra() {
         .then((res) => {
           setOrderId(res.id);
           console.log(newOrder);
-          alert(newOrder);
+          alert("Gracias por realizar tu compra");
         })
         .catch((error) => {
           console.log(error);
